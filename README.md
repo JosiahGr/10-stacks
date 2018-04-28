@@ -1,51 +1,106 @@
-![cf](http://i.imgur.com/7v5ASc8.png) lab 10 - Stacks and Queues Data Structures
-====
+# STACK DATA STRUCTURE
+version 1.1.0 
 
-## To Submit this Assignment
-* Read this document entirely and estimate how long this assignment will take.
-* Work in a fork of this repository
-* Work in a branch on your fork
-* Protect your repository's `master` branch by activating `continuous-integration/travis-ci` status checks
-* Create a pull request from your `lab` + `<your name>` branch to your `master` branch
-* Open a pull request to this repository
-* Submit on canvas a question and observation,your original estimate, how long you spent, and a link to your pull request
+This program implements a Stack Class using an internal Linked List class. 
 
-## Requirements
-#### Configuration
-<!-- list of files, configurations, tools, etc that are required -->
-  Your lab directory must include
-  * **README.md** -- with a documentation about your lab
-  * **.gitignore** -- with a robust .gitignore
-  * **.eslintrc** -- with the class .eslintrc file
-  * **.eslintignore** -- with the class .eslintignore
-  * **.package.json** -- with all dependencies and dev-dependencies
-  * **lib/** -- directory for holding your programs helper modules
-  * **__test__/** -- directory for holding your programs unit and integration tests
+## stack.push(value) 
+Time - O(1)
+Space - O(n)
 
-#### Testing
-  * write at least three test assertions for each method of the Stack and Queue List Data Structures
-  * organize your tests into appropriate describe/test blocks for test output readability
+The `push()` function adds one node to the "top" of the stack. It takes in a parameter of the nodes value that is being added.
 
-####  Documentation
-  * in your README, write documentation for you data structures
-  * your documentation should includes code block useage examples
-  * provide instructions for:
-    * installing and using your data structure
-    * accessing each method
-    * running your tests
+## stack.pop()
+Time - O(n)
+Space - O(n)
 
-#### Feature Tasks
-  * implement a Stack Class  using,internally, a Linked List class
-  * implement `push(value)` and `pop()` methods on the Stack class
-	* implement `peek()` and `isEmpty()` methods on the Stack class
+The `pop()` function removes the "last in" or "top" node of the stack.
 
-## Bonus Points:
-  * 2pts
-  * implement Reverse Polish Notation using your Stack data structure
-    * refer to the [Wiki](https://en.wikipedia.org/wiki/Reverse_Polish_notation) for more information on RPN
+## stack.peek()
+Time - O(n)
+Space - O(n)
 
-#### Rubric:
-  * Tests: 2pts
-  * Passes linter: 1pts
-  * Completed Data Structure: 5pts
-  * Big-O notation: 2pt
+The `peek()` function searches through the Stack to find and return the value of the "last in" node value. 
+
+## stack.isEmpty()
+Time - O(n)
+Space - O(n)
+
+The `isEmpty()` function searches for through the stack and will return `true` if it is empty and `false` if not. 
+
+# LinkedList Data Structure
+
+## LinkedList.insertAtHead(value)
+This function takes in one parameter that inserts the value at the begining of an array.
+
+```arr1 = [];
+
+arr1.LinkedList.insertAtHead(4);
+
+console.log(arr1); // [4]
+```
+
+## LinkedList.insertAtTail(value)
+
+ takes in one parameter that inserts the value at the end of an array. 
+
+```arr1 = [1, 2];
+
+arr1.LinkedList.insertAtTail(4);
+
+console.log(arr1); // [1, 2, 4]
+```
+
+
+### LinkedList.find(value)
+
+This method takes in one parameter and will search for the specified value. Will return null if value does not exist. 
+
+```arr1 = [1, 2, 4];
+
+var num = arr1.LinkedList.find(4);
+
+console.log(num); // 4
+```
+
+
+### LinkedList.remove(value) 
+
+This method takes in one parameter and removes the specified value from the list. Will return null if no value is found.  
+
+```arr1 = [1, 2, 4, 5, 6];
+
+var num = arr1.LinkedList.remove(4);
+
+console.log(arr1); // [1, 2, 5, 6]
+```
+
+
+### LinkedList.pop()
+
+This method removes the last item in a string. Will return null if array is empty. 
+
+```arr1 = [1, 2, 4, 5, 6];
+
+var num = arr1.LinkedList.pop();
+
+console.log(arr1); // [1, 2, 4, 5]
+```
+
+### linkedList.map()
+
+This method will search through every value in an array.
+
+```arr1 = [1, 2, 3, 4];
+
+console.log(arr1.LinkedList.map());
+// 1
+// 2
+// 3
+// 4
+```
+
+## Testing
+
+Insure that npm is updated and Node is installed. To utilize the testing functionality for this package, type in ```npm run test``` in the terminal while at the root of your directory.
+
+This program was developed by Josiah Green with the help from Lacy Hogan and Joy Hue
