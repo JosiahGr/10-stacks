@@ -85,6 +85,23 @@ module.exports = class LinkedList {
     }
     return null;
   }
+
+  findLast() {
+    let current = this.head;
+
+    if (!this.head) {
+      logger.log(logger.INFO, ' Stack is empty. Could not find value.');
+      return null;
+    }
+
+    while (current) {
+      if (current.next === null) {
+        return current.value;
+      }
+      current = current.next;
+    }
+    return undefined;
+  }
   
   remove(value) {
     if (!this.head) {
