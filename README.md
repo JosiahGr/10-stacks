@@ -4,15 +4,27 @@ version 1.1.0
 This program implements a Stack Class using an internal Linked List class. 
 
 ## stack.push(value) 
+Time - O(1)
+Space - O(n)
+
 The `push()` function adds one node to the "top" of the stack. It takes in a parameter of the nodes value that is being added.
 
 ## stack.pop()
+Time - O(n)
+Space - O(n)
+
 The `pop()` function removes the "last in" or "top" node of the stack.
 
 ## stack.peek()
+Time - O(n)
+Space - O(n)
+
 The `peek()` function searches through the Stack to find and return the value of the "last in" node value. 
 
 ## stack.isEmpty()
+Time - O(n)
+Space - O(n)
+
 The `isEmpty()` function searches for through the stack and will return `true` if it is empty and `false` if not. 
 
 # LinkedList Data Structure
